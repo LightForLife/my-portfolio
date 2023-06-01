@@ -29,7 +29,7 @@ export default function Hero({}: Props) {
         height={600}
         alt="Foto of the author"
       />
-      <div>
+      <div className="z-20">
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
           Frontend Developer
         </h2>
