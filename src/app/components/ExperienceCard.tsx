@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import js from "../../../public/js.png";
 
 type Props = {};
 
@@ -20,32 +22,38 @@ export default function ExperienceCard({}: Props) {
         <h4 className="text-4xl font-light">CEO of PAPAFAM</h4>
         <p className="font-bold text-2xl mt-1">PAPAFAM</p>
         <div className="flex space-x-2 my-2">
-          <img
+          <Image
             className="h-10 w-10 rounded-full"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjtiNdPR3dcbHaaMm0Jd1lK8YFispcnVIACKhD8eZbu4I4xnzQaKeILCI4d6Io46ceAIw&usqp=CAU"
+            src={js}
             alt=""
+            width={40}
+            height={40}
           />
-          <img
+          <Image
             className="h-10 w-10 rounded-full"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjtiNdPR3dcbHaaMm0Jd1lK8YFispcnVIACKhD8eZbu4I4xnzQaKeILCI4d6Io46ceAIw&usqp=CAU"
+            src={js}
             alt=""
-          />
-          <img
+            width={40}
+            height={40}
+          />{" "}
+          <Image
             className="h-10 w-10 rounded-full"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjtiNdPR3dcbHaaMm0Jd1lK8YFispcnVIACKhD8eZbu4I4xnzQaKeILCI4d6Io46ceAIw&usqp=CAU"
+            src={js}
             alt=""
+            width={40}
+            height={40}
           />
         </div>
-        <p className="uppercase py-5 space-y-4 ml-5 text-lg">
+        <p className="uppercase py-5 text-gray-300">
           Started work... - Ended...
         </p>
       </div>
       <ul className="list-disc space-y-4 ml-5 text-lg">
-        <li>Summary pointsSummary pointsSummary points</li>
-        <li>Summary pointsSummary pointsSummary points</li>
-        <li>Summary pointsSummary pointsSummary points</li>
-        <li>Summary pointsSummary pointsSummary points</li>
-        <li>Summary pointsSummary pointsSummary pointss</li>
+        <li>Summary pointsSummary points</li>
+        <li>Summary pointsSummary points</li>
+        <li>Summary pointsSummary points</li>
+        <li>Summary pointsSummary points</li>
+        <li>Summary pointsSummary points</li>
       </ul>
     </article>
   );
