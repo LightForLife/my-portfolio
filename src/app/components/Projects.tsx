@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import pet from "../../../public/Pet.png";
 
 type Props = {};
 
@@ -29,7 +30,7 @@ function Projects({}: Props) {
               transition={{ duration: 1.2 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              src="https://web-dev.imgix.net/image/T4FyVKpzu4WKF1kBNvXepbi08t52/cQKbjztkJ45DQoIw3sNH.png?auto=format"
+              src="pet.png"
               alt=""
             />
 
