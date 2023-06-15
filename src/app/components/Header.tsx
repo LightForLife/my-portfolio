@@ -40,6 +40,13 @@ export default function Header({}: Props) {
         transition={{ duration: 1.5 }}
         className="flex flex-row items-center text-gray-300 cursor-pointer"
       >
+        <a
+          href="test.pdf"
+          download
+          className="hidden md:inline-flex text-sm text-gray-400"
+        >
+          Dovnload CV
+        </a>
         <SocialIcon
           className="cursor-pointer"
           network="email"
@@ -47,7 +54,7 @@ export default function Header({}: Props) {
           bgColor="transparent"
         />
         <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-          Get In Touch
+          Get In Touchs
         </p>
       </motion.div>
     </header>
