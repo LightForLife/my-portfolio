@@ -14,7 +14,18 @@ import { fetchPageInfo } from "../../utills/fetchPageInfo";
 import { fetchExperience } from "../../utills/fetchExperiences";
 import { fetchSkills } from "../../utills/fetchSkills";
 import { fetchProjects } from "../../utills/fetchProjects";
-import { fetchSocial } from "../../utills/fetchSocial";
+import { fetchSocials } from "../../utills/fetchSocial";
+import { sanityClient, urlFor } from "../../sanity";
+
+// ====================================
+import { createClient } from "next-sanity";
+
+const client = createClient({
+  dataset: "production",
+  projectId: "8d8ggv0h",
+  apiVersion: "2023-06-12",
+  useCdn: true,
+});
 
 type Props = {
   pageInfo: PageInfo;
@@ -24,13 +35,7 @@ type Props = {
   socials: Social[];
 };
 
-export default function Home({
-  pageInfo,
-  experiences,
-  skills,
-  projects,
-  socials,
-}: Props) {
+export default function Home({ socials }: Props) {
   return (
     <main
       className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 
@@ -86,7 +91,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const experiences: Experience[] = await fetchExperience();
   const skills: Skill[] = await fetchSkills();
   const projects: Project[] = await fetchProjects();
-  const socials: Social[] = await fetchSocial();
+  const socials: Social[] = await fetchSocials();
 
   return {
     props: { pageInfo, experiences, skills, projects, socials },
